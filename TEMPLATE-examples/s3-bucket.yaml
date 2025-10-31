@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Exemplo - cria bucket S3 com versionamento habilitado
+Resources:
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${AWS::AccountId}-cf-sample-bucket'
+      VersioningConfiguration:
+        Status: Enabled
